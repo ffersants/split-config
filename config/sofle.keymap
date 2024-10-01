@@ -34,15 +34,6 @@
             #sensor-binding-cells = <0>;
             bindings = <&kp DOWN_ARROW>, <&kp UP_ARROW>;
         };
-
-        new_behavior: new_behavior {
-            compatible = "zmk,behavior-hold-tap";
-            label = "NEW_BEHAVIOR";
-            bindings = <&none>;
-            #binding-cells = <2>;
-            hold-trigger-key-positions = <36 50>;
-            tapping-term-ms = <2000>;
-        };
     };
 
     combos {
@@ -51,15 +42,7 @@
         page_refresh {
             bindings = <&kp LC(LS(F5))>;
             key-positions = <5 36 52>;
-        };
-    };
-
-    macros {
-        new_macro: new_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&new_behavior 0 &kp T &kp E &kp S &kp T &kp E &kp E &kp E &kp E>;
-            label = "NEW_MACRO";
+            layers = <0>;
         };
     };
 
