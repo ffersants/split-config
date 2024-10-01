@@ -51,6 +51,18 @@
             #binding-cells = <0>;
             bindings = <&key_repeat &kp E>;
             label = "NEW_MACROES";
+            wait-ms = <2000>;
+            tap-ms = <1000>;
+        };
+
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp C &kp C &kp O &kp N &kp S &kp O &kp L &kp E &kp DOT &kp L &kp O &kp G &kp LPAR &kp RPAR>;
+
+            label = "NEW_MACRO";
         };
     };
 
