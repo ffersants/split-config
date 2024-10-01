@@ -45,6 +45,15 @@
         };
     };
 
+    macros {
+        new_macroeS: new_macroeS {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&key_repeat &kp E>;
+            label = "NEW_MACROES";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
