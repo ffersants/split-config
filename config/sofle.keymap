@@ -34,6 +34,15 @@
             #sensor-binding-cells = <0>;
             bindings = <&kp DOWN_ARROW>, <&kp UP_ARROW>;
         };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-hold-tap";
+            label = "NEW_BEHAVIOR";
+            bindings = <&none>;
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <36 50>;
+            tapping-term-ms = <2000>;
+        };
     };
 
     combos {
@@ -42,27 +51,6 @@
         page_refresh {
             bindings = <&kp LC(LS(F5))>;
             key-positions = <5 36 52>;
-        };
-    };
-
-    macros {
-        new_macroeS: new_macroeS {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&key_repeat &kp E>;
-            label = "NEW_MACROES";
-            wait-ms = <2000>;
-            tap-ms = <1000>;
-        };
-
-        new_macro: new_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp LS(LEFT_WIN) &kp LS(T) &kp Y &kp P &kp E &kp SPACE &kp S &kp O &kp M &kp E &kp T &kp H &kp I &kp N &kp G &kp DOT &kp DOT &kp DOT>;
-
-            label = "NEW_MACRO";
         };
     };
 
