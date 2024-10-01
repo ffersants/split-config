@@ -36,6 +36,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        page_refresh {
+            bindings = <&kp LC(LS(F5))>;
+            key-positions = <5 36 52>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
