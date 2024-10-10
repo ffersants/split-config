@@ -78,8 +78,6 @@
             #binding-cells = <0>;
             bindings = <&none &kp D &kp O &kp T &kp N &kp E &kp T &kp SPACE &kp B &kp U &kp I &kp L &kp D>;
             label = "DOTNET_BUILD";
-            wait-ms = <3000>;
-            tap-ms = <3000>;
         };
     };
 
