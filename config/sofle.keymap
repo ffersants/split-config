@@ -36,7 +36,14 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        dotnet_watch_debug {
+            bindings = <&dotnet_watch_debug>;
+            key-positions = <27 14>;
+        };
+    };
 
     macros {
         refresh_clean_cache: new_macro {
@@ -51,6 +58,13 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT &kp F10>;
             label = "CONTEXT_MENU";
+        };
+
+        dotnet_watch_debug: dotnet_watch_debug {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp D &kp O &kp T &kp N &kp E &kp T &kp SPACE &kp W &kp A &kp T &kp C &kp H &kp SPACE &kp D &kp E &kp B &kp U &kp G>;
+            label = "DOTNET_WATCH_DEBUG";
         };
     };
 
@@ -119,7 +133,7 @@
 &trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &trans                          &kp PG_UP  &trans    &kp UP    &trans     &kp N0   &trans
 &trans      &kp LALT      &kp LCTRL     &kp LSHFT     &trans        &kp CLCK                        &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL  &kp BSPC
 &trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans    &trans  &trans     &trans    &trans    &trans     &trans   &trans
-                          &trans        &trans        &trans        &trans        &trans    &trans  &trans     &trans    &trans    &trans
+                          &trans        &trans        &trans        &trans        &mo 3     &trans  &trans     &trans    &trans    &trans
             >;
 
             sensor-bindings =
@@ -139,7 +153,7 @@
             bindings = <
 &bt BT_CLR         &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                               &none  &none  &none  &none  &none  &none
 &ext_power EP_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF                            &none  &none  &none  &none  &none  &none
-&none              &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &none                                      &none  &none  &none  &none  &none  &none
+&none              &rgb_ug RGB_BRD  &kp T            &none            &none            &none                                      &none  &none  &none  &none  &none  &none
 &none              &none            &none            &none            &none            &none            &rgb_ug RGB_TOG    &none  &none  &none  &none  &none  &none  &none
                                     &none            &none            &none            &none            &none              &none  &none  &none  &none  &none
             >;
