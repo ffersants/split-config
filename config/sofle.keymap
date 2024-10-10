@@ -81,8 +81,10 @@
         context_menu: context_menu {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT &kp F10>;
+            bindings = <&kp LS(F10)>;
             label = "CONTEXT_MENU";
+            tap-ms = <2000>;
+            wait-ms = <0>;
         };
 
         dotnet_watch_debug: dotnet_watch_debug {
