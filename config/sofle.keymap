@@ -43,6 +43,11 @@
             bindings = <&dotnet_watch_debug>;
             key-positions = <27 14>;
         };
+
+        dotnet_build {
+            bindings = <&dotnet_build>;
+            key-positions = <27 41>;
+        };
     };
 
     macros {
@@ -65,6 +70,16 @@
             #binding-cells = <0>;
             bindings = <&kp D &kp O &kp T &kp N &kp E &kp T &kp SPACE &kp W &kp A &kp T &kp C &kp H &kp SPACE &kp D &kp E &kp B &kp U &kp G>;
             label = "DOTNET_WATCH_DEBUG";
+            wait-ms = <30>;
+        };
+
+        dotnet_build: dotnet_build {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp D &kp O &kp T &kp N &kp E &kp T &kp SPACE &kp B &kp U &kp I &kp L &kp D>;
+            label = "DOTNET_BUILD";
+            wait-ms = <3000>;
+            tap-ms = <3000>;
         };
     };
 
