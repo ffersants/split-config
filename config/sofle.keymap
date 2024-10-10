@@ -68,6 +68,41 @@
             bindings = <&refresh_clean_cache>;
             key-positions = <42>;
         };
+
+        git_add {
+            bindings = <&git_add>;
+            key-positions = <29 25>;
+        };
+
+        git_commit {
+            bindings = <&git_commit>;
+            key-positions = <29 46>;
+        };
+
+        git_clone {
+            bindings = <&git_clone>;
+            key-positions = <29 39 33>;
+        };
+
+        git_push {
+            bindings = <&git_push>;
+            key-positions = <29 22>;
+        };
+
+        npm_install {
+            bindings = <&npm_install>;
+            key-positions = <45 20>;
+        };
+
+        npm_run_dev {
+            bindings = <&npm_run_dev>;
+            key-positions = <45 16 27>;
+        };
+
+        npm_start {
+            bindings = <&npm_start>;
+            key-positions = <45 26>;
+        };
     };
 
     macros {
@@ -114,6 +149,62 @@
             #binding-cells = <0>;
             bindings = <&kp C &kp O &kp N &kp S &kp O &kp L &kp E &kp DOT &kp L &kp O &kp G &kp LPAR &kp RPAR &kp LEFT_ARROW>;
             label = "CONSOLE_LOG";
+        };
+
+        git_pull: git_pull {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp G &kp I &kp T &kp SPACE &kp P &kp U &kp L &kp L &kp ENTER>;
+            label = "GIT_PULL";
+        };
+
+        git_add: git_add {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp G &kp I &kp T &kp SPACE &kp A &kp D &kp D &kp SPACE &kp DOT &kp RET>;
+            label = "GIT_ADD";
+        };
+
+        git_commit: git_commit {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp G &kp I &kp T &kp SPACE &kp C &kp O &kp M &kp M &kp I &kp T &kp SPACE &kp MINUS &kp M &kp SPACE &kp DQT &kp DQT &kp LEFT>;
+            label = "GIT_COMMIT";
+        };
+
+        git_push: git_push {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp G &kp I &kp T &kp SPACE &kp P &kp U &kp S &kp H &kp SPACE &kp RET>;
+            label = "GIT_PUSH";
+        };
+
+        git_clone: git_clone {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp G &kp I &kp T &kp SPACE &kp C &kp L &kp O &kp N &kp E &kp SPACE &kp LC(V)>;
+            label = "GIT_CLONE";
+        };
+
+        npm_install: npm_install {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N &kp P &kp M &kp SPACE &kp I &kp N &kp S &kp T &kp A &kp L &kp L &kp RET>;
+            label = "NPM_INSTALL";
+        };
+
+        npm_run_dev: npm_run_dev {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N &kp P &kp M &kp SPACE &kp R &kp U &kp N &kp SPACE &kp D &kp E &kp V &kp RET>;
+            label = "NPM_RUN_DEV";
+        };
+
+        npm_start: npm_start {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N &kp P &kp M &kp SPACE &kp S &kp T &kp A &kp R &kp T &kp RET>;
+            label = "NPM_START";
         };
     };
 
