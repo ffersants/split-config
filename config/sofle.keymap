@@ -48,6 +48,26 @@
             bindings = <&dotnet_build>;
             key-positions = <27 41>;
         };
+
+        dotnet_clean {
+            bindings = <&dotnet_clean>;
+            key-positions = <27 39>;
+        };
+
+        console_log {
+            bindings = <&console_log>;
+            key-positions = <39 33>;
+        };
+
+        context_menu {
+            bindings = <&context_menu>;
+            key-positions = <43>;
+        };
+
+        refresh {
+            bindings = <&refresh_clean_cache>;
+            key-positions = <42>;
+        };
     };
 
     macros {
@@ -68,7 +88,7 @@
         dotnet_watch_debug: dotnet_watch_debug {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp D &kp O &kp T &kp N &kp E &kp T &kp SPACE &kp W &kp A &kp T &kp C &kp H &kp SPACE &kp D &kp E &kp B &kp U &kp G>;
+            bindings = <&kp D &kp O &kp T &kp N &kp E &kp T &kp SPACE &kp W &kp A &kp T &kp C &kp H &kp SPACE &kp D &kp E &kp B &kp U &kp G &kp ENTER>;
             label = "DOTNET_WATCH_DEBUG";
             wait-ms = <30>;
         };
@@ -76,8 +96,22 @@
         dotnet_build: dotnet_build {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp D &kp O &kp T &kp N &kp E &kp T &kp SPACE &kp B &kp U &kp I &kp L &kp D>;
+            bindings = <&kp D &kp O &kp T &kp N &kp E &kp T &kp SPACE &kp B &kp U &kp I &kp L &kp D &kp ENTER>;
             label = "DOTNET_BUILD";
+        };
+
+        dotnet_clean: dotnet_clean {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp D &kp O &kp T &kp N &kp E &kp T &kp SPACE &kp C &kp L &kp E &kp A &kp N &kp RET>;
+            label = "DOTNET_CLEAN";
+        };
+
+        console_log: console_log {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp C &kp O &kp N &kp S &kp O &kp L &kp E &kp DOT &kp L &kp O &kp G &kp LPAR &kp RPAR &kp LEFT_ARROW>;
+            label = "CONSOLE_LOG";
         };
     };
 
