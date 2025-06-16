@@ -103,6 +103,16 @@
             bindings = <&npm_start>;
             key-positions = <45 26>;
         };
+
+        code_close_blocks {
+            bindings = <&kp LC(LS(LEFT_BRACKET))>;
+            key-positions = <52 20>;
+        };
+
+        code_expand_blocks {
+            bindings = <&kp LC(LS(RIGHT_BRACKET))>;
+            key-positions = <52 32>;
+        };
     };
 
     macros {
